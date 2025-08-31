@@ -1,0 +1,177 @@
+/* Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(3px);
+  }
+  
+  .modal-content {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    animation: modalFadeIn 0.3s ease-out;
+  }
+  
+  /* Modal Sizes */
+  .modal-content.sm {
+    max-width: 400px;
+  }
+  
+  .modal-content.md {
+    max-width: 600px;
+  }
+  
+  .modal-content.lg {
+    max-width: 800px;
+  }
+  
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .modal-title {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #2c3e50;
+  }
+  
+  .modal-close {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #7f8c8d;
+    transition: color 0.2s;
+  }
+  
+  .modal-close:hover {
+    color: #e74c3c;
+  }
+  
+  .modal-body {
+    padding: 0.5rem 0;
+  }
+  
+  /* Animation */
+  @keyframes modalFadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .modal-content {
+      width: 95%;
+      padding: 1rem;
+    }
+    
+    .modal-content.lg {
+      max-width: 95%;
+    }
+  }
+
+  /* Dispatch Modal Specific Styles */
+.dispatch-modal-content {
+    padding: 1rem;
+  }
+  
+  .emergency-location {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 4px;
+    margin: 1rem 0;
+    font-size: 1.1rem;
+  }
+  
+  .available-ambulances h4 {
+    margin-bottom: 1rem;
+    color: #2c3e50;
+    font-size: 1.2rem;
+  }
+  
+  .ambulance-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 300px;
+    overflow-y: auto;
+  }
+  
+  .ambulance-option {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    background: white;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .ambulance-option:hover {
+    background: #f8f9fa;
+    border-color: #3498db;
+  }
+  
+  .ambulance-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+  }
+  
+  .vehicle-number {
+    font-weight: bold;
+    color: #2c3e50;
+  }
+  
+  .driver-name {
+    color: #7f8c8d;
+  }
+  
+  .ambulance-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+  }
+  
+  .eta {
+    color: #27ae60;
+    font-weight: 500;
+  }
+  
+  .distance {
+    color: #e67e22;
+  }
+  
+  .no-ambulances, .loading-ambulances {
+    padding: 1.5rem;
+    text-align: center;
+    background: #f8f9fa;
+    border-radius: 4px;
+    color: #7f8c8d;
+    margin: 1rem 0;
+  }

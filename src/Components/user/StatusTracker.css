@@ -1,0 +1,61 @@
+.status-tracker {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  margin-left: 32px;
+}
+
+.status-stage {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.status-icon-wrapper {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  transition: border-color 0.3s, background-color 0.3s;
+}
+
+.status-icon-wrapper.active {
+  border-color: #00c853;
+  background-color: #e8f5e9;
+}
+
+.status-icon {
+  font-size: 20px;
+}
+
+.status-label {
+  margin-left: 12px;
+  font-weight: 500;
+  color: #333;
+}
+
+.status-label.active {
+  font-weight: 700;
+  color: #003366;
+}
+
+.status-line {
+  position: absolute;
+  width: 2px;
+  height: 48px;
+  background-color: #ccc;
+  left: 19px;
+  top: 40px;
+  z-index: 1;
+}
+
+.status-line.active {
+  background-color: #00c853;
+}

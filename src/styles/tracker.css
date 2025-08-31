@@ -1,0 +1,36 @@
+.tracker-error {
+  padding: 1rem;
+  background: #ffecec;
+  color: #d32f2f;
+  border-radius: 4px;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.tracker-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+.spinner {
+  border: 4px solid rgba(0,0,0,0.1);
+  border-radius: 50%;
+  border-top-color: #1976d2;
+  width: 30px;
+  height: 30px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.tracker-info {
+  background: #f5f5f5;
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 4px;
+}

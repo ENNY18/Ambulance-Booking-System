@@ -1,0 +1,83 @@
+/* Base Colors */
+.admin-header {
+  background-color: var(--nav-bg);
+  color: var(--text);
+  padding: 10px 20px;
+  border-bottom: 3px solid var(--primary);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.logo a {
+  font-size: 1.5rem;
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.admin-nav {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex: 1;
+}
+
+.admin-nav a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.admin-nav a:hover {
+  color: var(--primary);
+}
+
+.admin-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dark-toggle {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: var(--text);
+  transition: transform 0.2s;
+}
+
+.dark-toggle:hover {
+  transform: scale(1.1);
+}
+
+.profile-link {
+  color: var(--primary);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .admin-nav {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .admin-actions {
+    margin-top: 10px;
+    align-self: flex-end;
+  }
+}

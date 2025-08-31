@@ -1,0 +1,54 @@
+.emergency-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(230, 57, 70, 0.3);
+    transition: all 0.3s ease;
+    z-index: 1000;
+  }
+  
+  .emergency-btn:hover {
+    background-color: var(--primary-dark);
+    transform: scale(1.05);
+  }
+  
+  .emergency-btn.loading {
+    background-color: var(--gray);
+    cursor: not-allowed;
+  }
+  
+  .btn-icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+  
+  .btn-text {
+    text-align: center;
+    font-size: medium;
+  }
+  
+  .btn-loader {
+    width: 30px;
+    height: 30px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 1s ease-in-out infinite;
+  }
+  
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
